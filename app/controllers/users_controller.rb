@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
 
+  load_and_authorize_resource
+
   def index
    @users = User.all
   end
 
   def show
-    set_user
   end
 
   def new
@@ -13,7 +14,6 @@ class UsersController < ApplicationController
   end
 
   def edit
-    set_user
   end
 
   def create

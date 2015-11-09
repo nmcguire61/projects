@@ -1,11 +1,12 @@
 class AlbumsController < ApplicationController
 
+  load_and_authorize_resource
+
   def index
    @albums = Album.all
   end
 
   def show
-    set_album
   end
 
   def new
@@ -13,7 +14,6 @@ class AlbumsController < ApplicationController
   end
 
   def edit
-    set_album
   end
 
   def create

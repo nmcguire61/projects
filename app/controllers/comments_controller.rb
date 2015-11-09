@@ -1,11 +1,12 @@
 class CommentsController < ApplicationController
 
+  load_and_authorize_resource
+
   def index
-   @comments = Comment.all
+    @comments = Comment.all
   end
 
   def show
-    set_comment
   end
 
   def new
@@ -13,7 +14,6 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    set_comment
   end
 
   def create
@@ -31,21 +31,21 @@ class CommentsController < ApplicationController
   end
 
   def update
-      respond_to do |format|
-        if @commment.update(comment_params)
-          format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
-          format.json { render :show, status: :ok, location: @comment }
-        else
-          format.html { render :edit }
-          format.json { render json: @comment.errors, status: :unprocessable_entity }
-        end
+    respond_to do |format|
+      if @comment.update(comment_params)
+        format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
+        format.json { render :show, status: :ok, location: @comment }
+      else
+        format.html { render :edit }
+        format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
+  end
 
   def destroy
     set_comment.destroy
     respond_to do |format|
-      format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
+      format.html { redirect_to comments_url, notice  : 'Comment was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
