@@ -11,12 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151106144809) do
+ActiveRecord::Schema.define(version: 20151109122108) do
 
   create_table "albums", force: :cascade do |t|
     t.integer "user_id"
     t.integer "photo_id"
     t.string  "name"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "photo_id"
+    t.integer "user_id"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string "name"
+    t.string "photo_image"
   end
 
   create_table "users", force: :cascade do |t|
