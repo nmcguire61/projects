@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
-  resources :users 
+  devise_for :users, :controllers => { registrations: 'registrations' }
   resources :albums 
   resources :photos 
   resources :comments
+
+  # get 'users' => 'users#index'
+  resources :users
   
 
   #devise_scope :user do
