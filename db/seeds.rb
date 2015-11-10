@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.delete_all
 Album.delete_all
+Photo.delete_all
 
 u1 = User.create!( name: "Archibald", album_id:1)
 

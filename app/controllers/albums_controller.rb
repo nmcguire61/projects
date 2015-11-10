@@ -7,6 +7,8 @@ class AlbumsController < ApplicationController
   end
 
   def show
+    load_album
+    @photos = @album.photos.all
   end
 
   def new
@@ -51,6 +53,11 @@ class AlbumsController < ApplicationController
   end
 
   private
+
+  def load_album
+    @album = current_user.albums.find(params[:id])
+  end
+
   def set_album
     @album = Album.find(params[:id])
   end

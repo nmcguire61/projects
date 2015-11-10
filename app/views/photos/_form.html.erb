@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :album %>
-    <%= f.collection_select(:album_id, Album.all, :id, :name) %>
+    <%= f.collection_select(:album_id, current_user.albums, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :photo_image %><br />

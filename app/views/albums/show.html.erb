@@ -5,10 +5,18 @@
   <%= @album.name %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @album.user_id %>
-</p>
+<tbody>
+
+  <% @photos.each do |photo|  %>
+  
+    
+    <tr>
+      <td><%= photo.name %></td>
+      <td><%= image_tag photo.photo_image.medium.url %></td><br>
+    </tr>
+    <% end %>
+  
+</tbody>
 
 <%= link_to 'Edit', edit_album_path(@album) %> |
 <%= link_to 'Back', albums_path %>
