@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :users
-  resources :albums
-  resources :photos
+  resources :users 
+  resources :albums 
+  resources :photos 
   resources :comments
+  
+
+  #devise_scope :user do
+     # get "devise/sessions" => "user_session"
+    #end
+  
   root 'users#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

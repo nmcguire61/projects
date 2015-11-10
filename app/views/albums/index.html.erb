@@ -11,7 +11,7 @@
   </thead>
 
   <tbody>
-    <% @albums.each do |album| %>
+    <% @albums.each do |album| if album.user_id == current_user.id  %>
       <tr>
         <td><%= album.name %></td>
         <td><%= album.user_id %></td>
@@ -20,6 +20,7 @@
         <td><%= link_to 'Edit', edit_album_path(album) %></td>
         <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>

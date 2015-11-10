@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
 
   load_and_authorize_resource
 
@@ -45,7 +46,7 @@ class CommentsController < ApplicationController
   def destroy
     set_comment.destroy
     respond_to do |format|
-      format.html { redirect_to comments_url, notice  : 'Comment was successfully destroyed.' }
+      format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -56,7 +57,7 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-    params.require(:comment).permit(:user_id, :photo_id)
+    params.require(:comment).permit(:user_id, :photo_id, :comment_field)
   end
 
 end

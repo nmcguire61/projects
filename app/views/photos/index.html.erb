@@ -12,7 +12,7 @@
     <% @photos.each do |photo| %>
       <tr>
         <td><%= photo.name %></td>
-        <td><%= image_tag photo.photo_image.url %></td><br>
+        <td><%= image_tag photo.photo_image.medium.url %></td><br>
         <td><%= link_to 'Show', photo %></td>
         <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
         <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
