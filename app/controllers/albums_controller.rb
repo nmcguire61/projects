@@ -3,7 +3,7 @@ class AlbumsController < ApplicationController
   load_and_authorize_resource
 
   def index
-   @albums = Album.all
+    @albums = Album.all
   end
 
   def show
@@ -17,8 +17,7 @@ class AlbumsController < ApplicationController
   end
 
   def create
-    @album = Album.new(album_params)
-    user_id = current_user.id
+    @album = current_user.albums.new(album_params)
 
     respond_to do |format|
       if @album.save
@@ -32,16 +31,16 @@ class AlbumsController < ApplicationController
   end
 
   def update
-      respond_to do |format|
-        if @album.update(album_params)
-          format.html { redirect_to @album, notice: 'Album was successfully updated.' }
-          format.json { render :show, status: :ok, location: @album }
-        else
-          format.html { render :edit }
-          format.json { render json: @album.errors, status: :unprocessable_entity }
-        end
+    respond_to do |format|
+      if @album.update(album_params)
+        format.html { redirect_to @album, notice: 'Album was successfully updated.' }
+        format.json { render :show, status: :ok, location: @album }
+      else
+        format.html { render :edit }
+        format.json { render json: @album.errors, status: :unprocessable_entity }
       end
     end
+  end
 
   def destroy
     set_album.destroy
@@ -50,14 +49,14 @@ class AlbumsController < ApplicationController
       format.json { head :no_content }
     end
   end
-#
+
   private
   def set_album
     @album = Album.find(params[:id])
   end
-#
+
   def album_params
-    params.require(:album).permit(:name, :user_id, :photo_id)
+    params.require(:album).permit(:name, :user_id)
   end
 
 end
