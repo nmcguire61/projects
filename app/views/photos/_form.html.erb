@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :album %>
+    <%= f.collection_select(:album_id, Album.all, :id, :name) %>
+  </div>
+  <div class="field">
     <%= f.label :photo_image %><br />
     <%= f.file_field :photo_image %>
   </div>

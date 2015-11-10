@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151110153950) do
+ActiveRecord::Schema.define(version: 20151110163626) do
 
   create_table "albums", force: :cascade do |t|
     t.integer "user_id"
@@ -25,13 +25,13 @@ ActiveRecord::Schema.define(version: 20151110153950) do
   end
 
   create_table "photos", force: :cascade do |t|
-    t.string "name"
-    t.string "photo_image"
+    t.string  "name"
+    t.string  "photo_image"
+    t.integer "album_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.integer  "album_id"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
