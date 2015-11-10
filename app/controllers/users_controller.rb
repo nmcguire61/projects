@@ -3,10 +3,11 @@ class UsersController < ApplicationController
   load_and_authorize_resource
 
   def index
-   @users = User.all
+    @users = User.all
   end
 
   def show
+    @user_id = current_user.id
   end
 
   def new
@@ -31,16 +32,16 @@ class UsersController < ApplicationController
   end
 
   def update
-      respond_to do |format|
-        if @user.update(user_params)
-          format.html { redirect_to @user, notice: 'User was successfully updated.' }
-          format.json { render :show, status: :ok, location: @user }
-        else
-          format.html { render :edit }
-          format.json { render json: @user.errors, status: :unprocessable_entity }
-        end
+    respond_to do |format|
+      if @user.update(user_params)
+        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.json { render :show, status: :ok, location: @user }
+      else
+        format.html { render :edit }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
+  end
 
   def destroy
     set_user.destroy
