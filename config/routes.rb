@@ -12,7 +12,7 @@ Rails.application.routes.draw do
      # get "devise/sessions" => "user_session"
     #end
   
-  root 'users#index'
+  root 'albums#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

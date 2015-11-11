@@ -7,23 +7,21 @@
 
 <div class="cards">
   <% @photos.each do |photo|  %>
-    <div class="card">
-
-      <div class="card-image">
-        <img src="<%= photo.photo_image %>">
-      </div>
-      
-      <div class="card-header">
-        <%= photo.name %>
-      </div>
-      
-      <div class="card-copy">
-        <%= link_to raw('<button>Edit</button>'), edit_photo_path(photo[:id]) %>
-        <%= link_to raw('<button>Show Photo</button>'), photo %>
-        <%= link_to raw('<button>Delete</button>'), photo, method: :delete, data: { confirm: 'Are you sure?'} %>  
-      </div>
-
+  <div class="card">
+    <div class="card-image">
+      <img src="<%= photo.photo_image %>">
     </div>
+    <div class="card-header">
+      <%= photo.name %>
+    </div>
+    
+    <div class="card-copy">
+      <%= link_to raw('<button>Edit</button>'), edit_photo_path(photo[:id]) %>
+      <%= link_to raw('<button>Show Photo</button>'), photo %>
+      <%= link_to raw('<button>Delete</button>'), photo, method: :delete, data: { confirm: 'Are you sure?'} %>  
+    </div>
+
+  </div>
   <% end %>
 </div>
 

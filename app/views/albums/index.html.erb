@@ -4,8 +4,8 @@
   <% @albums.each do |album| %>
       <div class="card">
         <div class="card-image">
-        
-          <img src="<%= album.photos.sample %>">
+
+          <img src="<%= album.photos.sample.try(:photo_image) %>">
         </div>
         <div class="card-header">
           <%= album.name %>

@@ -8,6 +8,10 @@ header {
     text-align: center;
 }
 
+.navbar-brand{
+
+}
+
 header h1 {    
     color: #fff;
     font-family: "helvetica Neue", "Helvetica", sans-serif;
@@ -15,12 +19,14 @@ header h1 {
     font-size: 100px;
     line-height: 1.618em;
     margin: 0 0 0.1em;
+    /*text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1), 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff ;*/
 }
 
 main {
-  color: #FFF;
+  color: #000;
   background-color: #00b2b3;
-  text-indent: 20%;
+  text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1), 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff ;
+  /*text-indent: 20%;*/
 }
 
 footer {
@@ -29,6 +35,7 @@ footer {
 
 h1 {
 color: #fff;
+text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1), 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff ;
 }
 
 h2 {
