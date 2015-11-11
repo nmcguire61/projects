@@ -3,7 +3,6 @@
   @include flex-wrap(wrap);
   @include justify-content(space-between);
   @include outer-container;
-  @include span-columns(4);
 }
 
 .card {
@@ -30,6 +29,8 @@
   @include flex-basis(15em);
   @include flex-grow(1);
   @include transition (all 0.2s ease-in-out);
+  @include span-columns(4);
+  @include omega(3n);
   background-color: $card-background;
   border-radius: $base-border-radius;
   border: $card-border;
@@ -54,7 +55,7 @@
 
   .card-header {
     @include transition (all 0.2s ease-in-out);
-    background-color: $card-header-background;
+    background-color: #bebebe;
     border-bottom: $card-border;
     border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: bold;
@@ -66,6 +67,7 @@
     font-size: 0.9em;
     line-height: 1.5em;
     padding: ($base-spacing / 2) ($base-spacing / 2);
+    background-color: #099;
 
     p {
       margin: 0 0 ($base-spacing / 2);

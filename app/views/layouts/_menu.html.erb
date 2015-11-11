@@ -2,14 +2,15 @@
   <ul>
     <li>
       <% if user_signed_in? %>
-      <%= link_to 'logout', destroy_user_session_path, method: :delete %>
+      <%= link_to raw('<button>logout</button>'), destroy_user_session_path, method: :delete %>
       <% else %>
-      <%= link_to 'login', new_user_session_path %> |
-      <%= link_to 'register', new_user_registration_path %>
+      <%= link_to raw('<button>login</button>'), new_user_session_path %> |
+      <%= link_to raw('<button>register</button>'), new_user_registration_path %>
       <% end %>
     </li>
-    <li><%= link_to('Albums', albums_path) %></li>
-    <li><%= link_to('New Album', new_album_path) %></li>
-    <li><%= link_to('New Photo', new_photo_path) %></li>
+    <li><%= link_to raw('<button>Albums</button>'), albums_path %></li>
+    <li><%= link_to raw('<button>New Album</button>'), new_album_path %></li>
+    <li><%= link_to raw('<button>New Photo</button>'), new_photo_path %></li>
   </ul>
 </nav>
+

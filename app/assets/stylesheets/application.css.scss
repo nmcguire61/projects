@@ -2,7 +2,57 @@
 @import "base/base";
 @import "neat";
 
+header {
+    background-color: #099;
+    padding: 0.5em 1em;
+    text-align: center;
+}
 
+header h1 {    
+    color: #fff;
+    font-family: "helvetica Neue", "Helvetica", sans-serif;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 1.618em;
+    margin: 0 0 0.1em;
+}
+
+main {
+  color: #FFF;
+  background-color: #00b2b3;
+  text-indent: 20%;
+}
+
+footer {
+  margin-top: 10px;
+}
+
+h1 {
+color: #fff;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+nav {
+  display: inline;
+}
+
+li {
+  display: inline;
+}
+
+button {
+  background-color: #099;
+  border: 1px solid #FFF;
+  padding: 5px;
+  margin: 5px;
+}
+
+footer {
+  background-color: #099;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

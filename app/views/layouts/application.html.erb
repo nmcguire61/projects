@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>InstaGran</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <div class="wrapper">
+      <h1>InstaGran</h1>
+      <%= render partial: "layouts/menu" %>
+    </div>
+  </header>
+  <main>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p> 
+    <%= yield %>
+  </main>
 
-
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-
-<%= render partial: "layouts/menu" %>
-<%= yield %>
+  <footer>
+     <br>
+     <br>
+  </footer>
 
 </body>
 </html>

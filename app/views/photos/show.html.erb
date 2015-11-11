@@ -10,15 +10,13 @@
 </h2>
 
 <p>
-  <b>Image:</b>
   <%= link_to image_tag(@photo.photo_image.url) %>
 </p>
 
 
-
-
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', albums_path %>
+<%= link_to raw('<button>Edit</button>'), edit_photo_path(@photo[:id]) %>
+<%= link_to raw('<button>Show Photo</button>'), @photo %>
+<%= link_to raw('<button>Delete</button>'), @photo, method: :delete, data: { confirm: 'Are you sure?'} %>  
 
 
 
