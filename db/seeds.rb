@@ -9,6 +9,18 @@ User.delete_all
 Album.delete_all
 Photo.delete_all
 
-u1 = User.create!( name: "Archibald", album_id:1)
+u1 = User.create!( name: "Betty", email:"battleaxebetty@internets.example", password:"password", role: :full_member)
+u2 = User.create!( name: "Wullie", email:"wanderingwullie@internets.example", password:"password", role: :admin)
+u3 = User.create!( name: "Gepetto", email:"gepettingzoo@internets.example", password:"password", role: :free_member)
+u4 = User.create!( name: "Harold", email:"harollingthunder@internets.example", password:"password", role: :full_member)
 
-a1 = Album.create!( user_id: u1.id, photo_id: 1, name: "Memories")
+a1 = Album.create!( user_id: u1.id, name: "Memories")
+a2 = Album.create!( user_id: u2.id, name: "Summer lolz!")
+a3 = Album.create!( user_id: u3.id, name: "Nature shotz")
+a4 = Album.create!( user_id: u4.id, name: "HarHar and chums")
+
+
+p1 = Photo.create!( name:"Trolling YouTube comments!", photo_image:"betty_1.jpg", album_id: a1.id)
+p2 = Photo.create!( name:"pwning n00bs!", photo_image:"Wullie1.jpg", album_id: a2.id)
+p3 = Photo.create!( name:"ASL? Lolz!", photo_image:"Gepetto.jpg", album_id: a3.id)
+p4 = Photo.create!( name:"Rekt m8!", photo_image:"great_4.jpg", album_id: a4.id)
