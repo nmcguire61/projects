@@ -1,5 +1,7 @@
 <h1>Here are all <%= current_user.name %>'s albums:</h1>
 
+
+
 <div class="cards">
   <% @albums.each do |album| %>
       <div class="card">
@@ -19,4 +21,6 @@
   <% end %>
 </div>
 
-<%= link_to raw('<button>New album</button>'), new_album_path %>
+<div class=bottomish>
+  <%= link_to raw('<button>New album</button>'), new_album_path %>
+</div>

@@ -8,9 +8,6 @@ header {
     text-align: center;
 }
 
-.navbar-brand{
-
-}
 
 header h1 {    
     color: #fff;
@@ -40,6 +37,7 @@ text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30p
 
 h2 {
   font-size: 20px;
+  text-indent: 20%;
 }
 
 nav {
@@ -50,6 +48,12 @@ li {
   display: inline;
 }
 
+.images {
+ display: block;
+ margin-left: auto;
+ margin-right: auto; 
+}
+
 button {
   background-color: #099;
   border: 1px solid #FFF;
@@ -58,7 +62,7 @@ button {
 }
 
 .bottomish {
-  text-indent: 20%;
+  text-align: center;
 }
 
 footer {

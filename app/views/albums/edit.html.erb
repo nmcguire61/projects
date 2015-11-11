@@ -2,5 +2,7 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @album %> |
-<%= link_to 'Back', album_path %>
+<div class=bottomish>
+  <%= link_to raw('Show'), @album %> |
+  <%= link_to raw('Back'), album_path %>
+</div>

@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <h2>
   From <%= current_user.name %>'s <%= @photo.album.try(:name) %> album.
@@ -9,9 +8,9 @@
   <%= @photo.name %>
 </h2>
 
-<p>
+<div class=images>
   <%= link_to image_tag(@photo.photo_image) %>
-</p>
+</div>
 
 <div class=bottomish>
   <%= link_to raw('<button>Edit</button>'), edit_photo_path(@photo[:id]) %>
