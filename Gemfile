@@ -4,6 +4,9 @@ gem 'devise'
 gem 'cancancan', '~> 1.10'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'bourbon'
+gem 'neat'
+gem "refills", group: :development
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

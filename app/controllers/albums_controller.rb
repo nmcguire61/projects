@@ -3,7 +3,7 @@ class AlbumsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @albums = Album.all
+    @albums = current_user.albums
   end
 
   def show

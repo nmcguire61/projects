@@ -5,21 +5,29 @@
   <%= @album.name %>
 </p>
 
-<tbody>
-
+<div class="cards">
   <% @photos.each do |photo|  %>
-  
-    
-    <tr>
-      <td><%= photo.name %></td>
-      <td><%= image_tag photo.photo_image.medium.url %></td>
-      <td><%= link_to 'Show', photo %></td>
-      <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-      <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td><br>
-    </tr>
-    <% end %>
-  
-</tbody>
+    <div class="card">
 
-<%= link_to 'Edit', edit_album_path(@album) %> |
-<%= link_to 'Back', albums_path %>
+      <div class="card-image">
+        <img src="<%= photo.photo_image %>">
+      </div>
+      
+      <div class="card-header">
+        <%= photo.name %>
+      </div>
+      
+      <div class="card-copy">
+        <%= link_to raw('<button>Edit</button>'), edit_photo_path(photo[:id]) %>
+        <%= link_to raw('<button>Show Photo</button>'), photo %>
+        <%= link_to raw('<button>Delete</button>'), photo, method: :delete, data: { confirm: 'Are you sure?'} %>  
+      </div>
+
+    </div>
+  <% end %>
+</div>
+
+
+
+<%= link_to raw('<button>Rename</button>'), edit_album_path(@album) %> |
+<%= link_to raw('<button>Back</button>'), albums_path %>

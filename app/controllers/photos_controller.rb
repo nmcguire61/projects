@@ -43,9 +43,10 @@ class PhotosController < ApplicationController
   end
 
   def destroy
+    album = set_photo.album
     set_photo.destroy
     respond_to do |format|
-      format.html { redirect_to photos_url, notice: 'Photo was successfully destroyed.' }
+      format.html { redirect_to album, notice: 'Photo was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
