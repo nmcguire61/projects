@@ -6,6 +6,7 @@ header {
     background-color: #099;
     padding: 0.5em 1em;
     text-align: center;
+    text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1), 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff ;
 }
 
 
@@ -16,14 +17,13 @@ header h1 {
     font-size: 100px;
     line-height: 1.618em;
     margin: 0 0 0.1em;
-    /*text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1), 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff ;*/
+    
 }
 
 main {
   color: #000;
   background-color: #00b2b3;
-  text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1), 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff ;
-  /*text-indent: 20%;*/
+  
 }
 
 footer {
@@ -31,9 +31,9 @@ footer {
 }
 
 h1 {
-color: #fff;
-text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1), 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff ;
-padding: 5px;
+  font-size: 40px; 
+  color: #fff;
+  
 }
 
 h2 {
@@ -49,7 +49,7 @@ li {
   display: inline;
 }
 
-.images {
+img {
  display: block;
  margin-left: auto;
  margin-right: auto; 

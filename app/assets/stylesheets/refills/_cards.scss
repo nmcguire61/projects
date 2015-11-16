@@ -34,15 +34,16 @@
   background-color: $card-background;
   border-radius: $base-border-radius;
   border: $card-border;
-  box-shadow: 0 2px 4px darken($base-background-color, 10%);
   cursor: pointer;
   margin: 0 $card-margin $base-spacing $card-margin;
   position: relative;
   position: relative;
+  margin-top: 30px;
+  box-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1), 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff ;
 
   .card-image {
     overflow: hidden;
-    max-height: 150px;
+    height: 150px;
 
     img {
       @include transition (all 0.2s ease-in-out);

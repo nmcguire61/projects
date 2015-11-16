@@ -6,15 +6,19 @@
   <% @albums.each do |album| %>
       <div class="card">
         <div class="card-image">
+          <a href=/albums/<%= album[:id] %>>
+            <img src="<%= album.photos.sample.try(:photo_image) %>">
+          </a>
+        </div>
+          <a href=/albums/<%= album[:id] %>>
+            <div class="card-header">
+              <%= album.name %>
+            </div>
+          </a>
 
-          <img src="<%= album.photos.sample.try(:photo_image) %>">
-        </div>
-        <div class="card-header">
-          <%= album.name %>
-        </div>
         <div class="card-copy"> 
           <%= link_to raw('<button>Rename</button>'), edit_album_path(album[:id]) %>
-          <%= link_to raw('<button>Show Photos</button>'), album %>
+          <%= link_to raw('<button>Show Album</button>'), album %>
           <%= link_to raw('<button>Delete</button>'), album, method: :delete, data: { confirm: 'Are you sure?'} %>
         </div>
       </div>

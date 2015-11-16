@@ -1,19 +1,20 @@
 
 
-<p>
-  <strong>Name:</strong>
-  <%= @album.name %>
-</p>
+<h1><%= @album.name %> album:</h1>
 
 <div class="cards">
   <% @photos.each do |photo|  %>
   <div class="card">
-    <div class="card-image">
-      <img src="<%= photo.photo_image %>">
-    </div>
-    <div class="card-header">
-      <%= photo.name %>
-    </div>
+    <a href=/photos/<%= photo[:id] %>>
+      <div class="card-image">
+        <img src="<%= photo.photo_image %>">
+      </div>
+    </a>
+    <a href=/photos/<%= photo[:id] %>>
+      <div class="card-header">
+        <%= photo.name %>
+      </div>
+    </a>
 
     <div class="card-copy">
       <%= link_to raw('<button>Edit</button>'), edit_photo_path(photo[:id]) %>

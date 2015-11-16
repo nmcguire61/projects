@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  errors:
+      messages:
+        rmagick_processing_error: "file is not a valid image type. Sorry please try again."
