@@ -23,8 +23,9 @@ p {
 }
 
 a {
-  color: $action-color;
+  color: #fff;
   text-decoration: none;
+  margin-left: 20%;
   transition: color $base-duration $base-timing;
 
   &:active,

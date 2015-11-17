@@ -17,10 +17,11 @@
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  margin-left: 20%; 
 
   &:hover,
   &:focus {
-    background-color: shade($action-color, 20%);
+    background-color: #00cbcc;
     color: #fff;
   }
 

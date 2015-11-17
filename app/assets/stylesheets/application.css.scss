@@ -1,6 +1,7 @@
 @import "bourbon";
 @import "base/base";
 @import "neat";
+@import 'refills/cards';
 
 header {
     background-color: #099;
@@ -21,7 +22,7 @@ header h1 {
 }
 
 main {
-  color: #000;
+  color: #FFF;
   background-color: #00b2b3; 
 }
 
@@ -36,6 +37,7 @@ h1 {
 }
 
 h2 {
+  color: #fff;
   font-size: 20px;
   text-indent: 20%;
 }
@@ -46,6 +48,10 @@ nav {
 
 li {
   display: inline;
+}
+
+li a {
+  margin-left: 0;
 }
 
 img {
@@ -69,9 +75,14 @@ button:hover { background-color: #00cbcc; }
 }
 
 footer {
+  color: #FFF;
   background-color: #099;
   text-align: center;
   text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1), 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff ;
+}
+
+em {  
+  margin-left: 20%;
 }
 
 /*
@@ -90,4 +101,4 @@ footer {
  *= require_self
  */
 
- @import 'refills/cards';
+ 

@@ -2,21 +2,27 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :manage, :all
+       # can :manage, :all
 
     alias_action :create, :read, :update, :destroy, :to => :crud
+    alias_action :create, :destroy => :minimum
+
+
 
     user ||= User.new
-    case user.role
-    when :admin
+    case 
+    when user.role?(:admin)
         can :manage, :all
-    when :full_member
+    when user.role?(:full_member)
+        # can :minimum, Session
         can :crud, Album
         can :crud, Photo
-        can :crud, Comment 
-    when :free_member
+        can :crud, Comment
+    when user.role?(:free_member)
+        # can :minimum, Session
         can :view, Photo
         can :view, Comment
+        can :view, Album
     else
       can :sign_in
     end

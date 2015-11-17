@@ -14,8 +14,10 @@ select {
 }
 
 label {
+  color: #FFF;
   font-weight: 600;
   margin-bottom: $small-spacing / 2;
+  margin-left: 20%;
 
   &.required::after {
     content: "*";
@@ -25,6 +27,7 @@ label {
     display: none;
   }
 }
+
 
 #{$all-text-inputs},
 select[multiple=multiple] {
@@ -38,7 +41,9 @@ select[multiple=multiple] {
   margin-bottom: $small-spacing;
   padding: $base-spacing / 3;
   transition: border-color $base-duration $base-timing;
-  width: 100%;
+  width: 60%;
+  margin-left: 20%;
+
 
   &:hover {
     border-color: shade($base-border-color, 20%);
@@ -70,7 +75,7 @@ input[type="search"] {
 
 input[type="checkbox"],
 input[type="radio"] {
-  display: inline;
+  margin-left: 20%;
   margin-right: $small-spacing / 2;
 
   + label {
