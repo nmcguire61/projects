@@ -20,7 +20,7 @@ a3 = Album.create!( user_id: u3.id, name: "Nature shotz")
 a4 = Album.create!( user_id: u4.id, name: "HarHar and chums")
 
 
-p1 = Photo.create!( name:"Trolling YouTube comments!", photo_image:"betty_1.jpg", album_id: a1.id)
+# p1 = Photo.create!( name:"Trolling YouTube comments!", photo_image:File.open(File.join(Rails.root, "uploads/betty_1.jpg"), album_id: a1.id)
 p2 = Photo.create!( name:"pwning n00bs!", photo_image:"Wullie1.jpg", album_id: a2.id)
 p3 = Photo.create!( name:"ASL? Lolz!", photo_image:"Gepetto.jpg", album_id: a3.id)
 p4 = Photo.create!( name:"Rekt m8!", photo_image:"great_4.jpg", album_id: a4.id)

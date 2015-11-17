@@ -22,8 +22,7 @@ header h1 {
 
 main {
   color: #000;
-  background-color: #00b2b3;
-  
+  background-color: #00b2b3; 
 }
 
 footer {
@@ -62,8 +61,11 @@ button {
   margin: 5px;
 }
 
+button:hover { background-color: #00cbcc; }
+
 .bottomish {
   text-align: center;
+  padding-bottom: 10px;
 }
 
 footer {
@@ -71,6 +73,7 @@ footer {
   text-align: center;
   text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1), 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff ;
 }
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
