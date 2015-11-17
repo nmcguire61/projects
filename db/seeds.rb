@@ -19,6 +19,11 @@ a2 = Album.create!( user_id: u2.id, name: "Summer lolz!")
 a3 = Album.create!( user_id: u3.id, name: "Nature shotz")
 a4 = Album.create!( user_id: u4.id, name: "HarHar and chums")
 
+def createPhoto (name, filename, albumId) 
+  photo = Photo.create!( name:"#{name}", photo_image: File.open(File.join(Rails.root,"/app/uploaders/seed/#{filename}")), album_id: albumId)
+end
+
+p99 = createPhoto("MethodTest","betty_3.jpg",a3.id)
 
 p1 = Photo.create!( name:"Trolling YouTube comments!", photo_image: File.open(File.join(Rails.root,"/app/uploaders/seed/betty_1.jpg")), album_id: a1.id)
 p2 = Photo.create!( name:"Janice playing WoW 10 hours straight!", photo_image: File.open(File.join(Rails.root,"/app/uploaders/seed/betty_2.jpg")), album_id: a1.id)
