@@ -86,6 +86,7 @@
   &:focus,
   &:hover {
     background-color: $card-hover-background;
+    animation-iteration-count: infinite;
     
     .card-image img {
       background: $card-image-hover-background;

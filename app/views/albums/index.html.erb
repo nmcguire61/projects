@@ -4,7 +4,7 @@
 
 <div class="cards">
   <% @albums.each do |album| %>
-      <div class="card">
+      <div class="card animated pulse">
         <div class="card-image">
           <a href=/albums/<%= album[:id] %>>
             <img src="<%= album.photos.sample.try(:photo_image) %>">

@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :albums 
   resources :photos 
-  resources :comments
+  
+  resources :comments, only: [:index, :create]
+  
+
+  get '/comments/new/(:parent_id)', to: 'comments#new', as: :new_comment
 
   # get 'users' => 'users#index'
   resources :users

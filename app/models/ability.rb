@@ -5,7 +5,7 @@ class Ability
        # can :manage, :all
 
     alias_action :create, :read, :update, :destroy, :to => :crud
-    alias_action :create, :destroy => :minimum
+    
 
 
 
@@ -14,15 +14,13 @@ class Ability
     when user.role?(:admin)
         can :manage, :all
     when user.role?(:full_member)
-        # can :minimum, Session
         can :crud, Album
         can :crud, Photo
         can :crud, Comment
     when user.role?(:free_member)
-        # can :minimum, Session
-        can :view, Photo
-        can :view, Comment
-        can :view, Album
+        can :show, Photo
+        can :show, Comment
+        can :read, Album
     else
       can :sign_in
     end

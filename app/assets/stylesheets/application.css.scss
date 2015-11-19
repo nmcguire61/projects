@@ -2,6 +2,7 @@
 @import "base/base";
 @import "neat";
 @import 'refills/cards';
+@import "animate";
 
 header {
     background-color: #099;
@@ -77,6 +78,12 @@ button:hover { background-color: #00cbcc; }
 .bottomish a {
   margin-left: 0;
 }
+
+.comment_section a {
+  margin-left: 0;
+  text-align: center;
+}
+
 
 footer {
   color: #FFF;

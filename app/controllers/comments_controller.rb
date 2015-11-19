@@ -4,33 +4,36 @@ class CommentsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @comments = Comment.all
+    @comments = Comment.hash_tree
   end
 
   def show
   end
 
-  def new
-    @comment = Comment.new
-  end
-
   def edit
   end
 
-  def create
-    @comment = Comment.new(comment_params)
-    user_id = current_user
+  def new
+    @comment = Comment.new(parent_id: params[:parent_id])
+  end
 
-    respond_to do |format|
-      if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
-        format.json { render :show, status: :created, location: @comment }
-      else
-        format.html { render :new }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
-      end
+  def create
+    if params[:comment][:parent_id].to_i > 0
+      parent = Comment.find_by_id(params[:comment].delete(:parent_id))
+      @comment = parent.children.build(comment_params)
+    else
+      @comment = Comment.new(comment_params)
+      user_id = current_user
+    end
+
+    if @comment.save
+      flash[:success] = 'Your comment was successfully added!'
+      redirect_to root_url
+    else
+      render 'new'
     end
   end
+    
 
   def update
     respond_to do |format|

@@ -8,6 +8,7 @@
 User.delete_all
 Album.delete_all
 Photo.delete_all
+Comment.delete_all
 
 u1 = User.create!( name: "Betty", email:"battleaxebetty@internets.example", password:"password", role: :full_member)
 u2 = User.create!( name: "Wullie", email:"wanderingwullie@internets.example", password:"password", role: :admin)

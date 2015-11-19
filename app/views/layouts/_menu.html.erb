@@ -11,6 +11,16 @@
     <li><%= link_to raw('<button>Albums</button>'), albums_path %></li>
     <li><%= link_to raw('<button>New Album</button>'), new_album_path %></li>
     <li><%= link_to raw('<button>New Photo</button>'), new_photo_path %></li>
+    <li>
+      <% if can? :index, Photo %>
+        <%= link_to raw('<button>Photos</button>'), photos_path %>
+      <% end %>
+    </li>
+    <li>
+      <% if can? :index, User %>
+        <%= link_to raw('<button>Users</button>'), users_path %>
+      <% end %>
+    </li>
   </ul>
 </nav>
 

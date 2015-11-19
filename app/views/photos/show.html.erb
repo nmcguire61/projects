@@ -12,6 +12,13 @@
   <%= link_to image_tag(@photo.photo_image) %>
 </div>
 
+<div class=comment_section>
+  <center><p>
+    <%= link_to raw('<button>Comment On This Picture</button>'), new_comment_path%>
+  </p></center>
+</div>
+
+
 <div class=bottomish>
   <%= link_to raw('<button>Edit</button>'), edit_photo_path(@photo[:id]) %>
   <%= link_to raw('<button>Album</button>'), @album %>
