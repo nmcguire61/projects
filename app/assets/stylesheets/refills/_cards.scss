@@ -88,13 +88,13 @@
     background-color: $card-hover-background;
     animation-iteration-count: infinite;
     
+    
     .card-image img {
       background: $card-image-hover-background;
     }
   
     .card-header {
       background-color: #00cbcc;
-      /*card-image-hover-background: #00cbcc;*/
     }
   }
 

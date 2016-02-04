@@ -96,6 +96,39 @@ em {
   margin-left: 20%;
 }
 
+ @-webkit-keyframes input-shadow {
+    0% {
+        box-shadow: none;
+        animation-iteration-count: infinite;
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1), 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff ;
+        animation-iteration-count: infinite;
+    }
+    100% {
+        box-shadow: none;
+        animation-iteration-count: infinite;
+    }
+  }
+
+@keyframes input-shadow {
+    0% {
+        box-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1), 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff ;
+         
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1), 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff ;
+        
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1), 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff ;
+        
+    }
+ }
+.form__element {
+-webkit-animation:input-shadow ease-in-out 1s infinite; /* Chrome, Safari, Opera */
+animation:input-shadow ease-in-out 1s infinite;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
